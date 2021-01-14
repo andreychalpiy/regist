@@ -47,7 +47,7 @@ $(document).ready(function() {
         $('#content1').addClass('hidden')
     })
 
-    $('.btn-Cnl').click(function() {
+    $('.btn-cnl').click(function() {
 
         window.location.reload();
     })
