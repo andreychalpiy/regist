@@ -55,12 +55,38 @@ $(document).ready(function() {
 
 
 
+// $('.selectPicker').selectpicker();
+
+$(document).ready(function(){
+
+    var multipleCancelButton = new Choices('#choices-multiple-remove-button', {
+    removeItemButton: true,
+    maxItemCount:5,
+    searchResultLimit:5,
+    renderChoiceLimit:5
+    });
+   
+   
+});
 
 
 
+// ///////check confirmation \\\\\\\\\ \\ 
 
 
+let checkBox = document.getElementById('checkbox');
+let submit = document.getElementById('submit');
 
+checkBox.onchange = function () {
+
+    if(this.checked) {
+        submit.removeAttribute('disabled', 'disabled');
+    }else{
+        submit.setAttribute('disabled', 'disabled');
+    }
+
+    
+}
 
 
 
