@@ -73,10 +73,7 @@ body {
 .hidden {
   display: none;
 }
-.alert {
-  padding: 5px;
-  top: 5px;
-}
+
 .footer {
   background-color: black;
   width: 100%;
@@ -88,11 +85,29 @@ body {
   color: #fff;
 }
 
-/* BUTTON */
+/* */
+.bootstrap-select .bs-ok-default::after {
+  width: 0.3em;
+  height: 0.6em;
+  border-width: 0 0.1em 0.1em 0;
+  transform: rotate(45deg) translateY(0.5rem);
+}
+.position-rel {
+  position: relative;
+}
+
 .d-flex {
   justify-content: space-between;
 }
-
+.btn {
+  padding: 0.375rem 2.75rem;
+}
+.reset {
+  padding: 0.375rem 1.75rem;
+}
 .btn-close {
   padding: 10px;
+}
+.error {
+  color: rgb(146, 139, 139);
 }

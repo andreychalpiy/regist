@@ -5,22 +5,17 @@ $(document).ready(function(){
     })
 
 
-    $('.btn-close').click(function () {
+    $('.btn-close').click(function (event) {
         location.reload(true);
     })
 
-    
 
    
 
 
-    $('#confirmPass').change(checkPassword);
-
-
-
-
-
-
+    
+       
+    
 
 
     
@@ -38,22 +33,83 @@ $(document).ready(function(){
         }
     })
 
+/////   required verification form for registration
+    $(function() {
+
+        let $registrationForm = $('.registration-form'); 
+        $.validator.addMethod("noSpace", function (value, elem) {
+            return value == '' || value.trim().length != 0;
+        }, "Spaces are not allowed")
+      if($registrationForm.length) {
+
+        $registrationForm.validate({
+            rules: {
+                username:{
+                    required: true,
+                    noSpace: true,
+                    max: 50
+                },
+                email: {
+                    required: true,
+                    noSpace: true
+                },
+                password: {
+                    required: true,
+                    noSpace: true,
+                    min: 3,
+                    max: 16
+                },
+                confirmPassword: {
+                    required: true,
+                    noSpace: true,
+                    equalTo: "#password"
+                    },
+                firstName: "required",
+                Radio: "required"
+              
+            },
+            messages:{
+                username:{
+                    required: "Invalid user name!"
+                },
+                email: {
+                    required: "Invalid Email!"
+                },
+                password: {
+                    required: "Invalid Password!"
+                },
+                confirmPassword: {
+                    required: "Invalid Confirm Password!"
+                },
+                firstName: {
+                    required: "Invalid First Name!"
+                },
+                Radio: {
+                    required: "Invalid!"
+                }
+
+            }
+            
+        })
+
+      }
+     
+    })
+      
     
-        
-   
+      
+
+
+
+
+
+
+
 
 
 })
 
 
-function checkPassword() {
-    var password = $("#password").val();
-    var confirmPassword = $("#confirmPass").val();
 
-    if (password != confirmPassword){
-       
-        return  $(".alert-warning").removeClass("hidden");;
-    }
 
-    return $(".alert-warning").addClass("hidden");
-}
+
