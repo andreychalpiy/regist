@@ -2,30 +2,31 @@ $(document).ready(function(){
 
     $('#registLink').click(function() {
         $('#registBlock').removeClass('hidden');
+
+        $('.main-content_imgs').addClass('hidden');
     })
 
-
-    $('.btn-close').click(function (event) {
-        location.reload(true);
+    $('.btn-close').click(function(){
+        document.location.reload();
+    })
+  
+    $("#mainContentImg > img").each(function(i, elem) {
+        $(elem).click(function() {
+    
+            $("#mainContentImg > img").removeClass('active')
+    
+            $(this).addClass('active')
+            
+        })
     })
 
-
-   
-
-
+    $('.date').mask();
     
-       
+    $('#multi').multipleSelect()
     
-
-
-    
-
-
-
-
     // ///////check confirmation \\\\\\\\\ \\ 
 
-    $('#gridCheck').change(function() {
+    $('#confirmCheck').change(function() {
         if (this.checked) {
             $('#submitRegist').removeAttr('disabled', 'disabled')
         }else {
@@ -34,78 +35,48 @@ $(document).ready(function(){
     })
 
 /////   required verification form for registration
-    $(function() {
-
-        let $registrationForm = $('.registration-form'); 
-        $.validator.addMethod("noSpace", function (value, elem) {
-            return value == '' || value.trim().length != 0;
-        }, "Spaces are not allowed")
-      if($registrationForm.length) {
-
-        $registrationForm.validate({
-            rules: {
-                username:{
-                    required: true,
-                    noSpace: true,
-                    max: 50
-                },
-                email: {
-                    required: true,
-                    noSpace: true
-                },
-                password: {
-                    required: true,
-                    noSpace: true,
-                    min: 3,
-                    max: 16
-                },
-                confirmPassword: {
-                    required: true,
-                    noSpace: true,
-                    equalTo: "#password"
-                    },
-                firstName: "required",
-                Radio: "required"
-              
+    
+    let $registrationForm = $('.registration-form'); 
+    $.validator.addMethod("noSpace", function (value, elem) {
+        return value == '' || value.trim().length != 0;
+    }, "Spaces are not allowed")
+    $registrationForm.validate({
+        rules: {
+            userName:{
+                required: true,
+                noSpace: true,
+                rangelength: [1, 50],
             },
-            messages:{
-                username:{
-                    required: "Invalid user name!"
-                },
-                email: {
-                    required: "Invalid Email!"
-                },
-                password: {
-                    required: "Invalid Password!"
-                },
-                confirmPassword: {
-                    required: "Invalid Confirm Password!"
-                },
-                firstName: {
-                    required: "Invalid First Name!"
-                },
-                Radio: {
-                    required: "Invalid!"
-                }
-
+            email: {
+                required: true,
+                noSpace: true
+            },
+            password: {
+                required: true,
+                noSpace: true,
+                rangelength: [3, 16]
+            },
+            confirmPassword: {
+                required: true,
+                noSpace: true,
+                maxlength: 16,
+                equalTo: "#password"
+            },
+            firstName: {
+                required: true,
+                maxlength: 50,
+                noSpace: true
+            },
+            lastName: {
+                maxlength: 50
+            },
+            radio: "required",
+            date: {
+                dateITA: true
             }
             
-        })
-
-      }
-     
+        }
     })
-      
-    
-      
-
-
-
-
-
-
-
-
 
 })
 

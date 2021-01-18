@@ -5,13 +5,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <!-- CSS only -->
+    <link rel="stylesheet" href="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styleSlider.css">
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styleSlider.css">
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
@@ -30,9 +31,28 @@
         </nav>
 
         <div class="main-content">
+            <h1 class="main-content__title">Welcome!</h1>
+            <div class="col-8 main-content_imgs" id="mainContentImg">
+
+                <img class="content_img-1" src="https://wto.ru/upload/iblock/06e/06e01bd87f812028df6abad90fff41c7.jpg"
+                    alt="">
+
+                <img class="content_img-2" width="400px"
+                    src="https://ivczn.ru/wp-content/uploads/2019/07/b41e69910157c4939c10be14e91105bb.jpg" alt="">
+
+                <img class="content_img-3" width="700px"
+                    src="https://muzotkritka-online.ru/wp-content/uploads/2020/12/1.jpeg" alt="deal">
+
+                <img class="content_img-4"
+                    src="https://tehnoobzor.com/uploads/posts/2018-11/1542914788_chto-takoe-stenka-na-birzhe-kriptovalyut-i-zachem-ona-nuzhna.jpg"
+                    width="500px" alt="schedule">
+
+            </div>
             <div class="row registration hidden" id="registBlock">
                 <div class="col-5">
-                    <div class="img-regist"></div>
+                    <div class="registration-img">
+                        <div class="registration-img_color"></div>
+                    </div>
                 </div>
                 <div class="col-7">
                     <form class="row g-3 registration-form">
@@ -45,7 +65,7 @@
                                 User Name
                                 <span class="form-required">*</span>
                             </label>
-                            <input type="text" class="form-control" name="username" placeholder="User Name">
+                            <input type="text" class="form-control" name="userName" placeholder="User Name">
                         </div>
                         <div class="col-md-6">
                             <label for="inputEmail4" class="form-label">
@@ -79,20 +99,19 @@
                         </div>
                         <div class="col-6">
                             <label for="lastName" class="form-label">Last Name</label>
-                            <input type="text" class="form-control" placeholder="Last Name">
+                            <input type="text" class="form-control" placeholder="Last Name" name="lastName">
                         </div>
                         <div class="col-md-6">
-                            <label for="birthDate" class="form-label">Birth Date</label>
-                            <!-- <input type="text" class="form-control" id=""> -->
-                            <input class="form-control" placeholder="Birth Date" id="birthDate" type="text" />
+                            <label for="date" class="form-label">Birth Date</label>
+                            <input class="form-control" data-mask="00/00/0000" placeholder="Birth Date" name="date"
+                                id="birthDate" type="text" />
                         </div>
                         <div class="col-md-6">
                             <label for="interest" class="form-label">Interest</label>
-                            <select id="" class="form-select">
-                                <option selected>Cars</option>
-                                <option>Music</option>
-                                <option>Animal</option>
-                                <option></option>
+                            <select id="multi" multiple="multiple">
+                                <option value="Animals">Animals</option>
+                                <option value="Cars">Cars</option>
+                                <option value="Music">Music</option>
                             </select>
 
                         </div>
@@ -102,16 +121,14 @@
                                 <span class="form-required">*</span>
                             </label>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="Radio" id="flexRadioDefault1">
-                                <label class="form-check-label" for="flexRadioDefault1"></label>
-                                Male
-                                </label>
+                                <label class="form-check-label" for="">Male</label>
+                                <input class="form-check-input" type="radio" name="radio" id="">
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="Radio" id="flexRadioDefault2">
-                                <label class="form-check-label" for="flexRadioDefault2">
+                                <label class="form-check-label" for="">
                                     Female
                                 </label>
+                                <input class="form-check-input" type="radio" name="radio" id="">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -124,43 +141,45 @@
                         </div>
                         <div class="col-12">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck">
-                                <label class="form-check-label" for="gridCheck">
+                                <input class="form-check-input" type="checkbox" id="confirmCheck">
+                                <label class="form-check-label" for="">
                                     I confirm that I agree
                                 </label>
                             </div>
                         </div>
                         <div class="col-12">
-                            <button type="submit" id="submitRegist" disabled class="btn btn-primary">Submit</button>
-                            <button type="reset" class="btn btn-primary reset">Reset</button>
+                            <button id="submitRegist" disabled class="btn btn-primary">Submit</button>
+                            <button type="reset" class="btn btn-light reset" id="resetForm">Reset</button>
                         </div>
                     </form>
                 </div>
+            </div>
+
+
+
+
+            <div class="footer">
+                <p class="footer-text">corp 2021</p>
             </div>
         </div>
 
 
 
-        <div class="footer">
-            <p class="footer-text">corp 2021</p>
-        </div>
-    </div>
 
 
 
 
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+        <script src="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+            crossorigin="anonymous"></script>
 
-
-
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-        crossorigin="anonymous"></script>
-
-    <script src="./appSlider.js"></script>
-    <script src="./app.js"></script>
+        <script src="./appSlider.js"></script>
+        <script src="./app.js"></script>
 </body>
 
 </html>
