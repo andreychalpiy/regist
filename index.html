@@ -21,7 +21,12 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <span class="navbar-brand" href="#">ORGANIZATION</span>
-                <div class="navbar-nav">
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-nav navbar-collapse collapse" id="navbarCollapse">
                     <a class="nav-link active" href="#">Home</a>
                     <a class="nav-link" href="#">Contact</a>
                     <a class="nav-link" href="#" id="registLink">Registration</a>
@@ -31,155 +36,194 @@
         </nav>
 
         <div class="main-content">
-            <h1 class="main-content__title">Welcome!</h1>
-            <div class="col-8 main-content_imgs" id="mainContentImg">
-
-                <img class="content_img-1" src="https://wto.ru/upload/iblock/06e/06e01bd87f812028df6abad90fff41c7.jpg"
-                    alt="">
-
-                <img class="content_img-2" width="400px"
-                    src="https://ivczn.ru/wp-content/uploads/2019/07/b41e69910157c4939c10be14e91105bb.jpg" alt="">
-
-                <img class="content_img-3" width="700px"
-                    src="https://muzotkritka-online.ru/wp-content/uploads/2020/12/1.jpeg" alt="deal">
-
-                <img class="content_img-4"
-                    src="https://tehnoobzor.com/uploads/posts/2018-11/1542914788_chto-takoe-stenka-na-birzhe-kriptovalyut-i-zachem-ona-nuzhna.jpg"
-                    width="500px" alt="schedule">
+            <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+                <div class="col-md-6 px-0">
+                    <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
+                    <p class="lead my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque minima
+                        nulla consequuntur atque expedita facere quaerat sit, vitae tenetur molestiae quibusdam facilis
+                        sequi ea. Incidunt et nobis fugiat blanditiis obcaecati!</p>
+                    <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
+                </div>
 
             </div>
-            <div class="row registration hidden" id="registBlock">
-                <div class="col-5">
-                    <div class="registration-img">
-                        <div class="registration-img_color"></div>
+            <div class="row mb-2">
+                <div class="col-md-6">
+                    <div
+                        class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <strong class="d-inline-block mb-2 ">World</strong>
+                            <h3 class="mb-0">Post title</h3>
+                            <div class="mb-1 text-muted">Nov 12</div>
+                            <p class="card-text mb-auto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. A,
+                                suscipit. Modi sint facere expedita neque non consectetur recusandae voluptatum totam
+                                odio, autem cum eaque, hic velit accusamus quis nobis? Vel.</p>
+                            <a href="#" class="stretched-link">Continue reading</a>
+                        </div>
+                        <div class="col-auto d-none d-lg-block">
+                            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+                                role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                                focusable="false">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
+                                    fill="#eceeef" dy=".3em">Thumbnail</text>
+                            </svg>
+
+                        </div>
                     </div>
                 </div>
-                <div class="col-7">
-                    <form class="row g-3 registration-form">
-                        <div class="col-12 d-flex">
-                            <h3>Registration </h3>
-                            <div type="button" class="btn-close"></div>
+                <div class="col-md-6">
+                    <div
+                        class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <strong class="d-inline-block mb-2 ">World</strong>
+                            <h3 class="mb-0">Post title</h3>
+                            <div class="mb-1 text-muted">Nov 12</div>
+                            <p class="mb-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, harum
+                                non expedita enim repellat, inventore aspernatur nisi quos sed corporis natus labore qui
+                                atque! Ipsum omnis totam debitis optio cumque.</p>
+                            <a href="#" class="stretched-link">Continue reading</a>
                         </div>
-                        <div class="col-md-6">
-                            <label for="user" class="form-label">
-                                User Name
-                                <span class="form-required">*</span>
-                            </label>
-                            <input type="text" class="form-control" name="userName" placeholder="User Name">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="inputEmail4" class="form-label">
-                                E-mail
-                                <span class="form-required">*</span>
-                            </label>
-                            <input type="email" class="form-control" name="email" id="inputEmai" placeholder="E-mail">
-                        </div>
-                        <div class="col-md-6 ">
-                            <label for="inputPassword4" class="form-label">
-                                Password
-                                <span class="form-required">*</span>
-                            </label>
-                            <input type="password" class="form-control" name="password" id="password"
-                                placeholder="Password">
-                        </div>
-                        <div class="col-6">
-                            <label for="confirmPassword" class="form-label">
-                                Confirm Password
-                                <span class="form-required">*</span>
-                            </label>
-                            <input type="password" class="form-control" name="confirmPassword" id="confirmPass"
-                                placeholder="Confirm Password">
-                        </div>
-                        <div class="col-6">
-                            <label for="firstName" class="form-label">
-                                First Name
-                                <span class="form-required">*</span>
-                            </label>
-                            <input type="text" class="form-control" name="firstName" placeholder="First Name">
-                        </div>
-                        <div class="col-6">
-                            <label for="lastName" class="form-label">Last Name</label>
-                            <input type="text" class="form-control" placeholder="Last Name" name="lastName">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="date" class="form-label">Birth Date</label>
-                            <input class="form-control" data-mask="00/00/0000" placeholder="Birth Date" name="date"
-                                id="birthDate" type="text" />
-                        </div>
-                        <div class="col-md-6">
-                            <label for="interest" class="form-label">Interest</label>
-                            <select id="multi" multiple="multiple">
-                                <option value="Animals">Animals</option>
-                                <option value="Cars">Cars</option>
-                                <option value="Music">Music</option>
-                            </select>
+                        <div class="col-auto d-none d-lg-block">
+                            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+                                role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                                focusable="false">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
+                                    fill="#eceeef" dy=".3em">Thumbnail</text>
+                            </svg>
 
                         </div>
-                        <div class="col-md-6 d-flex " name="gender">
-                            <label for="Sex" class="form-label">
-                                Sex
-                                <span class="form-required">*</span>
-                            </label>
-                            <div class="form-check">
-                                <label class="form-check-label" for="">Male</label>
-                                <input class="form-check-input" type="radio" name="radio" id="">
-                            </div>
-                            <div class="form-check">
-                                <label class="form-check-label" for="">
-                                    Female
-                                </label>
-                                <input class="form-check-input" type="radio" name="radio" id="">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="" class="form-label">How much do you want to earn?</label>
-                            <div class="slider-container-5">
-                                <input type="text" class="slider-input-5-left" />
-                                <input type="text" class="slider-input-5-right " />
-                                <div class="slider-5"></div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="confirmCheck">
-                                <label class="form-check-label" for="">
-                                    I confirm that I agree
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <button id="submitRegist" disabled class="btn btn-primary">Submit</button>
-                            <button type="reset" class="btn btn-light reset" id="resetForm">Reset</button>
-                        </div>
-                    </form>
+                    </div>
                 </div>
-            </div>
-
-
-
-
-            <div class="footer">
-                <p class="footer-text">corp 2021</p>
             </div>
         </div>
 
+        <div class="row registration hidden" id="registBlock">
+            <div class="col-md-4">
+                <div class="registration-img">
+                    <div class="registration-img_color"></div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <form class="row g-3 registration-form">
+                    <div class="col-12 d-flex">
+                        <h3>Registration </h3>
+                        <div type="button" class="btn-close"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="user" class="form-label">
+                            User Name
+                            <span class="form-required">*</span>
+                        </label>
+                        <input type="text" class="form-control" name="userName" placeholder="User Name">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">
+                            E-mail
+                            <span class="form-required">*</span>
+                        </label>
+                        <input type="email" class="form-control" name="email" id="inputEmai" placeholder="E-mail">
+                    </div>
+                    <div class="col-md-6 ">
+                        <label for="inputPassword4" class="form-label">
+                            Password
+                            <span class="form-required">*</span>
+                        </label>
+                        <input type="password" class="form-control" name="password" id="password"
+                            placeholder="Password">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="confirmPassword" class="form-label">
+                            Confirm Password
+                            <span class="form-required">*</span>
+                        </label>
+                        <input type="password" class="form-control" name="confirmPassword" id="confirmPass"
+                            placeholder="Confirm Password">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="firstName" class="form-label">
+                            First Name
+                            <span class="form-required">*</span>
+                        </label>
+                        <input type="text" class="form-control" name="firstName" placeholder="First Name">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" placeholder="Last Name" name="lastName">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="date" class="form-label">Birth Date</label>
+                        <input class="form-control" data-mask="00/00/0000" placeholder="Birth Date" name="date"
+                            id="birthDate" type="text" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="interest" class="form-label">Interest</label>
+                        <select id="multi" multiple="multiple">
+                            <option value="Animals">Animals</option>
+                            <option value="Cars">Cars</option>
+                            <option value="Music">Music</option>
+                        </select>
 
+                    </div>
+                    <div class="col-md-12 col-lg-6 d-flex" style="
+                    padding-right: 20px;" name="gender">
+                        <label for="Sex" class="form-label">
+                            Sex
+                            <span class="form-required">*</span>
+                        </label>
+                        <div class="form-check">
+                            <label class="form-check-label" for="">Male</label>
+                            <input class="form-check-input" type="radio" name="radio" id="">
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label" for="">
+                                Female
+                            </label>
+                            <input class="form-check-input" type="radio" name="radio" id="">
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                        <label for="" class="form-label">How much do you want to earn?</label>
+                        <div class="slider-container-5">
+                            <input type="text" class="slider-input-5-left" />
+                            <input type="text" class="slider-input-5-right " />
+                            <div class="slider-5"></div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="confirmCheck">
+                            <label class="form-check-label" for="confirmCheck">
+                                I confirm that I agree
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button id="submitRegist" disabled class="btn btn-primary">Submit</button>
+                        <button type="reset" class="btn btn-light reset" id="resetForm">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr class="featurette-divider">
+        <div class="footer">
+            <p class="footer-text">© 2021 Company, Inc.
+            <p class="float-end"><a href="#">Back to top</a></p>
+            </p>
+        </div>
+    </div>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
 
-
-
-
-        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-        <script src="https://unpkg.com/multiple-select@1.5.2/dist/multiple-select.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-            crossorigin="anonymous"></script>
-
-        <script src="./appSlider.js"></script>
-        <script src="./app.js"></script>
+    <script src="./appSlider.js"></script>
+    <script src="./app.js"></script>
 </body>
 
 </html>

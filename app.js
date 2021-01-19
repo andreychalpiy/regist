@@ -3,7 +3,7 @@ $(document).ready(function(){
     $('#registLink').click(function() {
         $('#registBlock').removeClass('hidden');
 
-        $('.main-content_imgs').addClass('hidden');
+        $('.main-content').addClass('hidden');
     })
 
     $('.btn-close').click(function(){
