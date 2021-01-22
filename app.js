@@ -1,23 +1,18 @@
 $(document).ready(function(){
 
-    $('#registLink').click(function() {
-        $('#registBlock').removeClass('hidden');
+    // let response = fetch('https://jsonplaceholder.typicode.com/posts')
+    // .then(function(response) {
+    //     console.log(response);
+    // })
+    // console.log(response);
 
-        $('.main-content').addClass('hidden');
-    })
 
     $('.btn-close').click(function(){
         document.location.reload();
     })
-  
-    $("#mainContentImg > img").each(function(i, elem) {
-        $(elem).click(function() {
-    
-            $("#mainContentImg > img").removeClass('active')
-    
-            $(this).addClass('active')
-            
-        })
+
+    $('#resetForm').click(() => {
+        document.location.reload();
     })
 
     $('.date').mask();
@@ -37,6 +32,7 @@ $(document).ready(function(){
 /////   required verification form for registration
     
     let $registrationForm = $('.registration-form'); 
+    let $loginForm = $('#loginForm');
     $.validator.addMethod("noSpace", function (value, elem) {
         return value == '' || value.trim().length != 0;
     }, "Spaces are not allowed")
@@ -77,7 +73,20 @@ $(document).ready(function(){
             
         }
     })
-
+    $loginForm.validate({
+        rules: {
+            userName:{
+                required: true,
+                noSpace: true,
+                rangelength: [1, 50],
+            },
+            password: {
+                required: true,
+                noSpace: true,
+                rangelength: [3, 16]
+            },
+        }
+    })
 })
 
 

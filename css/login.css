@@ -1,0 +1,85 @@
+.wrap-login {
+  padding-top: 90px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.form-label {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+.login-form {
+  width: 400px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 0 12px -6px #2b5188;
+  padding: 30px;
+  line-height: 2;
+}
+.login-form input,
+.login-form a {
+  width: 100%;
+  text-decoration: none;
+  opacity: 0.9;
+}
+.login-title {
+  height: 100px;
+  text-align: center;
+  font-size: x-large;
+  font-weight: 600;
+  padding: 10px;
+}
+.forgot-pass {
+  font-size: 13px;
+  text-align: right;
+  color: #383e48eb;
+  float: right;
+}
+.btn.btn-login {
+  width: 100%;
+  margin-top: 30px;
+  background: #0a57cad9;
+  color: #fff;
+}
+.btn-login:hover {
+  background-color: #0e4aa5da;
+}
+.signup-using {
+  display: block;
+  padding-top: 30px;
+  text-align: center;
+  font-size: 13px;
+  color: #383e48eb;
+  text-decoration: none;
+}
+a.signup-using {
+  margin-bottom: 80px;
+}
+.login-social {
+  display: flex;
+  padding-top: 30px;
+}
+.login-social_icon {
+  display: flex;
+  justify-content: center;
+}
+
+.fab {
+  display: inline-block;
+  font-size: 40px;
+  cursor: pointer;
+}
+.fab:hover {
+  opacity: 0.5;
+}
+.fa-twitter-square {
+  color: blueviolet;
+  margin-left: 80px;
+}
+.fa-google-plus-square {
+  color: red;
+  margin-right: 80px;
+}
+.fa-facebook-square {
+  color: royalblue;
+}
